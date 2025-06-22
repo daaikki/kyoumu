@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個別指導塾 新入社員研修資料：中学生指導 科目別ポイント集</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and overall aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+            color: #334155; /* Darker gray text */
+        }
+        .container {
+            max-width: 960px;
+        }
+        .section-title {
+            border-bottom: 2px solid #3b82f6; /* Blue underline */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #1e3a8a; /* Darker blue for titles */
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .card-header {
+            font-weight: bold;
+            color: #3b82f6; /* Blue for card headers */
+            margin-bottom: 0.75rem;
+        }
+        details > summary {
+            list-style: none; /* Remove default marker */
+            cursor: pointer;
+            padding: 0.75rem 0;
+            font-weight: bold;
+            color: #1e40af; /* Dark blue for summary */
+            transition: color 0.2s ease-in-out;
+        }
+        details > summary::-webkit-details-marker {
+            display: none; /* Hide for WebKit browsers */
+        }
+        details[open] > summary {
+            color: #2563eb; /* Lighter blue when open */
+        }
+        details > summary:hover {
+            color: #60a5fa; /* Even lighter blue on hover */
+        }
+        details > summary::after {
+            content: '+';
+            float: right;
+            transition: transform 0.2s ease-in-out;
+        }
+        details[open] > summary::after {
+            content: '-';
+            transform: rotate(0deg);
+        }
+        .star-rating {
+            color: #FFD700; /* Gold color for stars */
+            font-size: 1.1em;
+        }
+        .category-title {
+            font-weight: 600; /* Semi-bold */
+            margin-top: 0.75rem;
+            margin-bottom: 0.5rem;
+            color: #2563eb; /* Blue for category titles */
+        }
+        .eiken-grade-title {
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased leading-normal">
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 shadow-lg rounded-b-xl">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-extrabold mb-2 rounded-lg p-2 bg-white bg-opacity-20 inline-block">
+                中学生指導 科目別ポイント集
+            </h1>
+            <p class="text-xl opacity-90">大阪府公立高校入試に焦点を当てた教務ガイド</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 mt-8">
+        <!-- 科目別指導のポイント -->
+        <section class="card">
+            <h2 class="text-2xl font-bold section-title">科目別指導のポイント</h2>
+            <p class="text-md mb-4 text-gray-700">
+                各科目、各学年で習う主要単元と、大阪府の公立高校入試における重要度を五つ星（★）で表しています。
+                <span class="font-semibold">（★：やや重要、★★：重要、★★★：かなり重要、★★★★：非常に重要、★★★★★：最重要）</span>
+                <br>※重要度は一般的な傾向に基づいた目安です。実際の入試出題傾向は年度によって変動する可能性があります。
+            </p>
+            <p class="text-md mb-4 text-gray-700 font-semibold">
+                ★各学年の単元説明では、関連する前の学年の内容や、後の学年での発展、入試での融合などに言及し、教務的な繋がりを分かりやすく示しています。
+            </p>
+            <div class="space-y-4">
+                <details>
+                    <summary>数学</summary>
+                    <div class="p-4 bg-blue-50 rounded-b-lg mt-2">
+                        <p class="mb-2">数学は積み重ねの科目です。基礎概念の理解を徹底し、論理的思考力を養うことが重要です。特に計算ミスは、途中式の書き方や検算の習慣をつけることで減らせます。</p>
+                        <h4 class="font-semibold mt-4 mb-2">中1（中学1年生）</h4>
+                        <h5 class="category-title">【計算・式】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>正負の数 <span class="star-rating">★★★★★</span> (全ての計算の基礎であり、中2以降の文字式や方程式に必須)</li>
+                            <li>文字と式 <span class="star-rating">★★★★</span> (中2の連立方程式、中3の多項式・二次方程式の土台となる)</li>
+                        </ul>
+                        <h5 class="category-title">【方程式・関数】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>方程式 <span class="star-rating">★★★★★</span> (中2の連立方程式、中3の二次方程式へと発展し、文章題を解く上で最重要)</li>
+                            <li>比例・反比例 <span class="star-rating">★★★</span> (中2の一次関数、中3の二次関数へと繋がる関数の導入)</li>
+                        </ul>
+                        <h5 class="category-title">【図形】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>平面図形・空間図形 <span class="star-rating">★★★</span> (基本的な図形の性質理解は、中2の図形証明、中3の相似や三平方の定理の基礎となる)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中2（中学2年生）</h4>
+                        <h5 class="category-title">【方程式・関数】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>連立方程式 <span class="star-rating">★★★★★</span> (中1の方程式の発展形であり、中3の関数と図形の融合問題で頻出)</li>
+                            <li>一次関数 <span class="star-rating">★★★★★</span> (中1の比例・反比例を発展させた内容。グラフの読み取り、式作成は中3の二次関数や図形との融合問題で最重要)</li>
+                        </ul>
+                        <h5 class="category-title">【図形】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>図形の性質と合同 <span class="star-rating">★★★★</span> (図形証明の基礎。中3の相似の理解に不可欠)</li>
+                        </ul>
+                        <h5 class="category-title">【確率】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>確率 <span class="star-rating">★★★</span> (基本的な場合の数と確率は、中3でも応用問題として出題されることがある)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中3（中学3年生）</h4>
+                        <h5 class="category-title">【計算・式】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>多項式 <span class="star-rating">★★★★</span> (中1の文字と式の応用。因数分解、展開は二次方程式の解法に必須)</li>
+                            <li>平方根 <span class="star-rating">★★★★★</span> (二次方程式、二次関数、三平方の定理など、多岐にわたる分野で必須となる計算)</li>
+                        </ul>
+                        <h5 class="category-title">【方程式・関数】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>二次方程式 <span class="star-rating">★★★★★</span> (中1・中2で培った方程式の知識の集大成。入試で最頻出であり、関数や図形と融合して出題されることが多い)</li>
+                            <li>二次関数 <span class="star-rating">★★★★</span> (中2の一次関数を発展させた内容。グラフの性質、変域、座標と融合した応用問題が多い)</li>
+                        </ul>
+                        <h5 class="category-title">【図形】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>図形の相似 <span class="star-rating">★★★★★</span> (中2の合同を発展させた内容。図形証明や相似比を利用した長さ・面積・体積の計算問題で最重要)</li>
+                            <li>円の性質 <span class="star-rating">★★★★</span> (角度、長さ、証明問題で出題される。図形の相似や三平方の定理と融合することも多い)</li>
+                            <li>三平方の定理 <span class="star-rating">★★★★★</span> (図形、空間図形、座標、関数との融合問題で最重要。他の単元と組み合わせて出題されることが多い)</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>英語</summary>
+                    <div class="p-4 bg-blue-50 rounded-b-lg mt-2">
+                        <p class="mb-2">英語は「読む・書く・聞く・話す」の4技能をバランス良く伸ばすことが目標です。特に中学生では、基礎となる文法と語彙の定着が重要です。</p>
+                        <h4 class="font-semibold mt-4 mb-2">中1（中学1年生）</h4>
+                        <h5 class="category-title">【文法】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Be動詞・一般動詞の現在形 <span class="star-rating">★★★★★</span> (全ての英文の基本構造。中2以降の時制や文法の土台)</li>
+                            <li>疑問文・否定文 <span class="star-rating">★★★★★</span> (基本的なコミュニケーションに必須。中2以降の複雑な疑問文の基礎)</li>
+                        </ul>
+                        <h5 class="category-title">【語彙・表現】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>代名詞 <span class="star-rating">★★★★</span> (スムーズな会話・文章に必須。長文読解での指示語理解にも繋がる)</li>
+                            <li>数詞・時・場所の表現 <span class="star-rating">★★★</span> (日常会話での使用頻度が高く、リスニング・ライティングの基礎)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中2（中学2年生）</h4>
+                        <h5 class="category-title">【文法】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>過去形・未来形 <span class="star-rating">★★★★★</span> (中1の現在形から時間軸を広げる基本。中3の現在完了形への橋渡し)</li>
+                            <li>助動詞 (can, must, willなど) <span class="star-rating">★★★★</span> (表現の幅を広げ、中3の間接疑問文や仮定法の基礎にもなる)</li>
+                            <li>不定詞・動名詞 <span class="star-rating">★★★★★</span> (入試での出題頻度が高い重要文法。長文読解や英作文で必須)</li>
+                            <li>比較 (as...as, -er than, the -est) <span class="star-rating">★★★★</span> (状況説明に必須。中3の長文読解で構造把握に役立つ)</li>
+                            <li>接続詞 (when, if, becauseなど) <span class="star-rating">★★★★</span> (複文作成の基礎。中3の関係代名詞の理解にも繋がる)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中3（中学3年生）</h4>
+                        <h5 class="category-title">【文法】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>現在完了形 (have done) <span class="star-rating">★★★★★</span> (中2までの時制を発展させた完了、経験、継続の表現。長文読解、英作文で頻出)</li>
+                            <li>受動態 (be done) <span class="star-rating">★★★★★</span> (主体を明確にしない表現で、長文読解、英作文に必須)</li>
+                            <li>分詞 (現在分詞-ing, 過去分詞-ed) <span class="star-rating">★★★★</span> (名詞修飾や付帯状況を表し、複雑な英文を理解する上で重要)</li>
+                            <li>関係代名詞 (who, which, that) <span class="star-rating">★★★★★</span> (中2の接続詞を発展させた、複雑な英文読解・作成に最重要。入試の長文で核となる)</li>
+                            <li>間接疑問文 <span class="star-rating">★★★★</span> (中1・中2の疑問文を発展させた自然な質問表現。英作文や会話で役立つ)</li>
+                            <li>仮定法 (If I were...) <span class="star-rating">★★★</span> (非現実的な状況の表現。発展内容だが、長文中に登場することもある)</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>国語</summary>
+                    <div class="p-4 bg-blue-50 rounded-b-lg mt-2">
+                        <p class="mb-2">国語は全ての科目の基礎となる読解力と表現力を養う科目です。筆者の意図や文章構造を正確に読み取り、自分の言葉で論理的に表現する力を育成します。</p>
+                        <h4 class="font-semibold mt-4 mb-2">中1（中学1年生）</h4>
+                        <h5 class="category-title">【読解】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>物語文の読解 (登場人物の心情、場面理解) <span class="star-rating">★★★★</span> (物語の基本分析。中2・中3の小説読解の基礎となる)</li>
+                            <li>説明的文章の読解 (筆者の主張、要点把握) <span class="star-rating">★★★★</span> (論理的思考の基礎。中2・中3の評論読解へと発展)</li>
+                            <li>詩歌・短歌・俳句 (表現技法、鑑賞) <span class="star-rating">★★★</span> (文学的な感性の育成。入試でも選択肢や短い記述で出題される)</li>
+                        </ul>
+                        <h5 class="category-title">【文法・語句】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>漢字・語句 <span class="star-rating">★★★★★</span> (全ての読解・記述の土台であり、学年が上がっても継続的に学習が必要)</li>
+                            <li>文法（品詞、文の成分） <span class="star-rating">★★★★</span> (正確な読解・記述に必要。中2・中3でさらに複雑な文法事項を学ぶ基礎)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中2（中学2年生）</h4>
+                        <h5 class="category-title">【読解】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>古文（竹取物語、枕草子など） <span class="star-rating">★★★★</span> (基本的な古語、歴史的仮名遣い、現代語訳は中3古文の基礎)</li>
+                        </ul>
+                        <h5 class="category-title">【文法・語句】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>表現技法 (比喩、擬人化、対比など) <span class="star-rating">★★★★</span> (文章を深く読み取る力。中3の読解や作文で応用する)</li>
+                            <li>接続表現・指示語 <span class="star-rating">★★★★</span> (文脈理解と論理展開に不可欠。長文読解で特に重要)</li>
+                            <li>敬語 (尊敬語、謙譲語、丁寧語) <span class="star-rating">★★★</span> (実生活での適切な言葉遣い。入試の文法問題で問われることがある)</li>
+                        </ul>
+                        <h5 class="category-title">【記述・表現】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>論理的な文章の構成 (序論・本論・結論) <span class="star-rating">★★★★★</span> (記述問題、作文の基礎。中3の小論文に直結)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中3（中学3年生）</h4>
+                        <h5 class="category-title">【読解】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>現代文読解（評論、随筆、小説） <span class="star-rating">★★★★★</span> (中1・中2で培った読解力の集大成。入試の核となる読解力)</li>
+                            <li>古文・漢文（重要語句、句形、現代語訳、返り点） <span class="star-rating">★★★★★</span> (中2の古文を発展させた内容。入試でほぼ確実に出題され、得点源になりやすい)</li>
+                        </ul>
+                        <h5 class="category-title">【文法・語句】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>文法（動詞の活用、助動詞の識別など） <span class="star-rating">★★★★★</span> (中1・中2の文法知識を発展させた、難易度の高い文法問題。入試でも頻出)</li>
+                        </ul>
+                        <h5 class="category-title">【記述・表現】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>作文・小論文 (テーマに沿った論述、意見文) <span class="star-rating">★★★★★</span> (中2で学んだ構成力を応用。記述力、思考力を問われる最重要項目)</li>
+                        </ul>
+                        <h5 class="category-title">【その他】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>メディアリテラシー <span class="star-rating">★★★</span> (情報社会における批判的思考。説明的文章の読解と関連して出題されることがある)</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>理科</summary>
+                    <div class="p-4 bg-blue-50 rounded-b-lg mt-2">
+                        <p class="mb-2">理科は単なる暗記科目ではなく、「なぜそうなるのか」という原理原則を理解することが重要です。身近な現象と結びつけて教えることで、興味を引き出し、深い理解を促します。</p>
+                        <h4 class="font-semibold mt-4 mb-2">中1（中学1年生）</h4>
+                        <h5 class="category-title">【生物】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>植物の生活と分類 <span class="star-rating">★★★★</span> (光合成、呼吸、植物の分類は、中2の動物の生活、中3の生命の連続性へと繋がる生物分野の基礎)</li>
+                        </ul>
+                        <h5 class="category-title">【化学】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>身のまわりの物質 (状態変化、気体の性質、水溶液) <span class="star-rating">★★★★★</span> (化学分野の基礎であり、中2の化学変化、中3の酸・アルカリとイオンの理解に不可欠)</li>
+                        </ul>
+                        <h5 class="category-title">【物理】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>光・音・力 (反射、屈折、音の性質、力の作用) <span class="star-rating">★★★★</span> (物理分野の基礎。中2の電流、中3の運動とエネルギーへと発展する)</li>
+                        </ul>
+                        <h5 class="category-title">【地学】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>大地の変化 (地震、火山、地層) <span class="star-rating">★★★</span> (地球科学の基礎。中3の地球と宇宙への導入)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中2（中学2年生）</h4>
+                        <h5 class="category-title">【生物】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>動物の生活と細胞 (消化、呼吸、血液循環、細胞) <span class="star-rating">★★★★</span> (生物分野の中核。中1の植物の生活と合わせて生命現象の理解を深め、中3の遺伝へと繋がる)</li>
+                        </ul>
+                        <h5 class="category-title">【化学】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>化学変化と原子・分子 (化学反応式、質量保存、化合) <span class="star-rating">★★★★★</span> (中1の物質の性質を発展させた化学反応の理解に最重要。中3の酸・アルカリとイオンで応用される)</li>
+                        </ul>
+                        <h5 class="category-title">【物理】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>電流とそのはたらき (オームの法則、電力、磁界) <span class="star-rating">★★★★★</span> (中1の光・音・力から発展した物理分野の計算問題の核。入試で頻出)</li>
+                        </ul>
+                        <h5 class="category-title">【地学】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>天気とその変化 (湿度、気圧、前線) <span class="star-rating">★★★</span> (気象現象の理解。中3の地球と宇宙と関連して出題されることもある)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中3（中学3年生）</h4>
+                        <h5 class="category-title">【生物】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>生命の連続性 (遺伝、生殖、進化) <span class="star-rating">★★★★★</span> (中1・中2で学んだ生物分野の集大成。重要テーマであり、グラフや実験考察問題で出題される)</li>
+                        </ul>
+                        <h5 class="category-title">【化学】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>酸・アルカリとイオン (中和、イオン式) <span class="star-rating">★★★★★</span> (中2の化学変化を応用した化学分野の応用。計算問題や実験考察問題で頻出)</li>
+                        </ul>
+                        <h5 class="category-title">【物理】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>運動とエネルギー (速さ、力学的エネルギー、仕事) <span class="star-rating">★★★★★</span> (中1の力、中2の電流を発展させた物理分野の複雑な計算、グラフ問題。入試で配点が高い)</li>
+                        </ul>
+                        <h5 class="category-title">【地学】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>地球と宇宙 (天体の動き、宇宙の広がり) <span class="star-rating">★★★★</span> (中1の大地の変化、中2の天気を発展させた地学分野の応用。図やグラフの読解も重要)</li>
+                        </ul>
+                        <h5 class="category-title">【その他】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>科学技術と人間 (科学の発展と社会) <span class="star-rating">★★★</span> (総合的な考察問題として、他の分野と融合して出題されることがある)</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>社会</summary>
+                    <div class="p-4 bg-blue-50 rounded-b-lg mt-2">
+                        <p class="mb-2">社会は歴史、地理、公民の3分野から成り立ちます。単なる知識の暗記に留まらず、時代や地域、社会の仕組みを多角的に捉え、現代社会の課題と結びつけて考える力を養うことが目標です。</p>
+                        <h4 class="font-semibold mt-4 mb-2">中1（中学1年生）</h4>
+                        <h5 class="category-title">【地理】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>世界の地理 (世界の地形、気候、産業、文化) <span class="star-rating">★★★★</span> (世界全体の基礎知識。中3の国際社会の理解にも繋がる)</li>
+                            <li>日本の地理 (日本の地形、気候、産業、地域性) <span class="star-rating">★★★★★</span> (入試で日本の地理は必須。資料読解や記述問題で頻出)</li>
+                        </ul>
+                        <h5 class="category-title">【歴史】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>歴史：古代～中世 (旧石器時代から室町時代まで) <span class="star-rating">★★★★</span> (日本史の基礎固め。中2以降の近世・近代史の背景理解に不可欠)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中2（中学2年生）</h4>
+                        <h5 class="category-title">【歴史】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>歴史：近世～近代 (安土桃山時代から第二次世界大戦終結まで) <span class="star-rating">★★★★★</span> (中1歴史の発展。重要人物、事件が多く、入試頻出。中3の現代史の直接的な背景となる)</li>
+                        </ul>
+                        <h4 class="font-semibold mt-4 mb-2">中3（中学3年生）</h4>
+                        <h5 class="category-title">【歴史】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>歴史：現代史 (戦後から現代まで) <span class="star-rating">★★★★★</span> (中2歴史の発展。近年の出来事と関連付けて出題され、時事問題との融合も多い)</li>
+                        </ul>
+                        <h5 class="category-title">【公民】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>公民：日本国憲法と基本的人権 <span class="star-rating">★★★★★</span> (公民分野の最重要テーマ。中3の経済や国際社会の理解にも繋がる)</li>
+                            <li>公民：政治の仕組み (三権分立、選挙、地方自治) <span class="star-rating">★★★★</span> (国の仕組みの理解。中3の経済や国際社会の理解に必要)</li>
+                            <li>公民：経済の仕組み (市場経済、財政、金融) <span class="star-rating">★★★★★</span> (グラフ、資料問題で頻出。中2公民の知識を応用し、実社会の仕組みを理解する)</li>
+                            <li>公民：国際社会 (国際連合、国際協力、地球規模の課題) <span class="star-rating">★★★★</span> (中1の地理、中2の政治の仕組みと関連が深い。時事問題との融合問題が多い)</li>
+                        </ul>
+                        <h5 class="category-title">【その他】</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>時事問題 <span class="star-rating">★★★★★</span> (歴史、地理、公民のどの分野とも融合して出題される可能性が高く、普段からの情報収集が重要)</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- 英検対策 -->
+        <section class="card mt-8">
+            <h2 class="text-2xl font-bold section-title">英検対策</h2>
+            <p class="text-md mb-4 text-gray-700">
+                英検は英語力の総合的な指標となり、高校入試の内申点や、推薦入試の際に有利になることがあります。各級の概要、出題傾向、効果的な対策を把握しましょう。
+            </p>
+            <div class="space-y-4">
+                <details>
+                    <summary>英検3級</summary>
+                    <div class="p-4 bg-blue-50 rounded-b-lg mt-2">
+                        <h5 class="eiken-grade-title">概要：</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>対象レベル：中学卒業程度</li>
+                            <li>日常生活に必要な英語を理解し、また使用できることが求められます。</li>
+                            <li>一次試験（筆記 <b>65分</b>、リスニング <b>約25分</b>）と二次試験（面接 <b>約5分</b>）があります。</li>
+                            <li>配点（CSEスコア）：<b>リーディング、ライティング、リスニング、スピーキングの各技能に均等に配点（各550点、合計2200点満点）。合格基準スコアは一次試験: 1002点、二次試験: 334点。</b></li>
+                        </ul>
+                        <h5 class="eiken-grade-title mt-4">傾向：</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><b>筆記</b>: 短文の語句空所補充、会話文の空所補充、長文読解（掲示・Eメール・説明文など）、英文作成（自由英作文）が出題されます。基本的な文法知識と語彙力が問われます。</li>
+                            <li><b>リスニング</b>: 会話の応答、会話の内容理解、英文の内容理解が出題されます。明確な発音で、比較的ゆっくり話されます。</li>
+                            <li><b>面接</b>: 3級の面接は、自己紹介、イラストの内容説明、質問応答など、基本的なコミュニケーション能力が問われます。</li>
+                        </ul>
+                        <h5 class="eiken-grade-title mt-4">対策：</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><b>単語・熟語</b>: 中学で習う基本的な単語・熟語を完璧に覚える。単語帳やアプリを繰り返し活用する。</li>
+                            <li><b>文法</b>: 基礎文法（5文型、時制、助動詞、不定詞、動名詞、比較、受動態など）を網羅的に復習し、問題演習で定着させる。</li>
+                            <li><b>長文読解</b>: 日常的な内容の短文から、Eメールや簡単な物語文まで、多様な文章を読み慣れる。速読よりも正確な読解を重視。</li>
+                            <li><b>ライティング</b>: 提示された質問に対して、自分の意見や理由を25～35語程度で記述する練習を積む。基本的な構文を使って、論理的に書く練習をする。</li>
+                            <li><b>リスニング</b>: 過去問や予想問題集の音源を繰り返し聞き、内容を正確に聞き取る練習をする。シャドーイングも効果的。</li>
+                            <li><b>面接</b>: 過去問の模擬面接を繰り返し行い、応答の瞬発力を高める。アイコンタクト、ジェスチャーなども意識する。</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>英検準2級</summary>
+                    <div class="p-4 bg-blue-50 rounded-b-lg mt-2">
+                        <h5 class="eiken-grade-title">概要：</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>対象レベル：高校中級程度</li>
+                            <li>高校で学習する英語の範囲をカバーし、日常生活に必要な英語に加え、社会的な題材を扱った英文を理解し、使用できることが求められます。</li>
+                            <li>一次試験（筆記 <b>75分</b>、リスニング <b>約25分</b>）と二次試験（面接 <b>約6分</b>）があります。</li>
+                            <li>配点（CSEスコア）：<b>リーディング、ライティング、リスニング、スピーキングの各技能に均等に配点（各600点、合計2400点満点）。合格基準スコアは一次試験: 1322点、二次試験: 406点。</b></li>
+                        </ul>
+                        <h5 class="eiken-grade-title mt-4">傾向：</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><b>筆記</b>: 語彙・文法問題（文脈判断、語句整序）、会話文空所補充、長文読解（説明文、物語文）、Eメール・英作文が出題されます。3級より専門的な語彙や複雑な構文が増えます。</li>
+                            <li><b>リスニング</b>: 会話の内容一致、長文の内容一致、イラスト内容一致など。話すスピードも速くなります。</li>
+                            <li><b>面接</b>: 自己紹介、パッセージ（短文）の音読、イラストの内容説明（状況描写・登場人物の気持ち）、質問応答、面接官への質問など。論理的に話す能力がより重視されます。</li>
+                        </ul>
+                        <h5 class="eiken-grade-title mt-4">対策：</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><b>単語・熟語</b>: 高校で習う基本的な単語・熟語に加え、社会問題や環境問題など、幅広い分野の語彙を増やす。接頭辞・接尾辞の知識も役立つ。</li>
+                            <li><b>文法</b>: 3級までの文法を完璧にした上で、関係代名詞、分詞、仮定法などの高校文法を深く理解する。</li>
+                            <li><b>長文読解</b>: 論説文や物語文など、内容が複雑な長文を多く読み、速く正確に内容を把握する練習をする。段落ごとの要点把握、主題の特定を意識する。</li>
+                            <li><b>ライティング</b>: 提示された質問に対し、賛成・反対の意見を明確にし、その理由を2つ挙げ、50～60語程度で記述する練習。論理構成が重要。</li>
+                            <li><b>リスニング</b>: ニュースやドキュメンタリーなど、より実践的な英語の音源に触れ、聞き取り速度を上げる訓練をする。</li>
+                            <li><b>面接</b>: 音読練習で正確な発音とイントネーションを身につける。イラスト描写は状況だけでなく、登場人物の感情や背景も推測して表現する練習をする。質問応答は自分の意見を具体例を交えて説明できるよう準備する。</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>英検2級</summary>
+                    <div class="p-4 bg-blue-50 rounded-b-lg mt-2">
+                        <h5 class="eiken-grade-title">概要：</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>対象レベル：高校卒業程度</li>
+                            <li>社会生活で求められる英語を十分に理解し、また使用できることが求められます。大学入試の優遇措置や、将来の選択肢を広げる上で非常に価値のある級です。</li>
+                            <li>一次試験（筆記 <b>85分</b>、リスニング <b>約25分</b>）と二次試験（面接 <b>約7分</b>）があります。</li>
+                            <li>配点（CSEスコア）：<b>リーディング、ライティング、リスニング、スピーキングの各技能に均等に配点（各650点、合計2600点満点）。合格基準スコアは一次試験: 1520点、二次試験: 460点。</b></li>
+                        </ul>
+                        <h5 class="eiken-grade-title mt-4">傾向：</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><b>筆記</b>: 長文中の語句空所補充、長文内容一致選択、要約問題、Eメール、英作文（意見論述）が出題されます。語彙レベルが高く、抽象的な内容の長文が多いです。</li>
+                            <li><b>リスニング</b>: 会話・英文の内容理解（選択式・要点記入）、リアルな状況での会話や講義内容など、より実践的で情報量が多いです。</li>
+                            <li><b>面接</b>: 2級の面接は、パッセージ音読、イラスト（状況説明）、質問応答（社会性のある話題）、自分の意見と理由、面接官への質問など、多岐にわたります。社会性のある話題について論理的に意見を述べることが求められます。</li>
+                        </ul>
+                        <h5 class="eiken-grade-title mt-4">対策：</h5>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><b>単語・熟語</b>: 大学受験レベルの単語帳を活用し、政治、経済、環境、医療、テクノロジーなど、社会性の高いテーマの語彙を強化する。</li>
+                            <li><b>文法</b>: 準2級までの文法知識を完璧にした上で、複雑な構文（倒置、省略、強調構文など）も理解できるようにする。</li>
+                            <li><b>長文読解</b>: 専門性の高いテーマの長文を大量に読む。段落ごとの主題把握、筆者の主張、反対意見の反論など、読解戦略を練る。速読と精読のバランスが重要。</li>
+                            <li><b>ライティング</b>: 提示された社会的なテーマに対し、自分の意見と2つの理由、具体例を交えて80～100語程度で論述する練習を積む。導入、本論、結論の構成を意識し、説得力のある文章を目指す。</li>
+                            <li><b>リスニング</b>: 英語のニュース番組やポッドキャスト、TED Talksなど、実際の英語の音声に日常的に触れる。聞き取れない箇所があっても全体の内容を把握する練習。</li>
+                            <li><b>面接</b>: 社会性のあるテーマについて、自分の意見を英語で論理的に説明できる練習をする。日頃からニュースに関心を持ち、意見を形成する習慣をつける。スムーズな発話と流暢さを意識する。</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>英検S-CBTについて</summary>
+                    <div class="p-4 bg-blue-50 rounded-b-lg mt-2">
+                        <p class="mb-2">英検S-CBT（Computer Based Testing）は、英検（従来型）と同じ資格・スコアが得られる新しい受験方式です。特に中学生にとって、以下のようなメリットがあります。</p>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><b>1日で4技能受験可能</b>: スピーキング、リスニング、リーディング、ライティングの全4技能を1日で完結して受験できます。従来型のように一次試験と二次試験で別日に分かれることがありません。</li>
+                            <li><b>原則毎週実施</b>: 受験機会が多いため、部活動や他の習い事との両立がしやすく、生徒の都合に合わせて受験日を選びやすいです（級や地域によっては毎週実施でない場合もあります）。</li>
+                            <li><b>試験内容・採点基準は従来型と同じ</b>: 出題内容や難易度、採点基準は英検（従来型）と全く同じです。合格すれば、従来型と同じ級認定や英検CSEスコアが得られます。</li>
+                            <li><b>スピーキングは吹き込み式</b>: 面接官との対面形式ではなく、ヘッドセットに音声を録音する吹き込み式なので、面接に緊張しやすい生徒も落ち着いて受験できます。</li>
+                            <li><b>リスニングはヘッドセット使用</b>: ヘッドセットを使用するため、周囲の雑音に影響されにくく、音量も自分で調整できるため、リスニングに集中しやすい環境です。</li>
+                            <li><b>ライティングの解答方式選択</b>: ライティングは、キーボード入力（タイピング型）と手書き（筆記型）から選択できます。タイピングに慣れていない生徒も安心して手書きで解答可能です。</li>
+                            <li><b>試験の流れ</b>: スピーキング → リスニング → リーディング → ライティングの順で実施されます。</li>
+                        </ul>
+                        <p class="mb-2 mt-4">
+                            S-CBT方式は、より柔軟な受験機会と、PCを使った集中しやすい環境が特徴です。生徒の特性やスケジュールに合わせて、従来型とS-CBTのどちらが良いか検討し、適切な対策を指導しましょう。
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 mt-8 text-center rounded-t-xl shadow-inner">
+        <p>&copy; 2025 個別指導塾. All Rights Reserved.</p>
+        <p class="text-sm mt-2 opacity-80">この資料は研修目的で作成されました。</p>
+    </footer>
+</body>
+</html>
