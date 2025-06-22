@@ -448,11 +448,109 @@
                 </details>
             </div>
         </section>
+
+        <!-- AIアシスタントセクションの追加 -->
+        <section class="card mt-8">
+            <h2 class="text-2xl font-bold section-title">AIアシスタント ✨</h2>
+            <p class="text-md mb-4 text-gray-700">
+                日々の指導で疑問に思ったり、生徒の学習でつまずいた時に、AIアシスタントがあなたの強い味方になります。
+                具体的な指導方法から、生徒のモチベーションアップのコツまで、どんなことでもお気軽にご質問ください。
+                ここに質問を入力して、AIアシスタントからのヒントを得ましょう！
+            </p>
+            <div class="mb-4">
+                <textarea id="aiQuestionInput" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" rows="5" placeholder="例：中学数学の二次関数を苦手とする生徒への効果的な導入方法は？"></textarea>
+            </div>
+            <div class="text-center mb-4">
+                <button id="askAiButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    ✨ AIアシスタントに質問する ✨
+                </button>
+            </div>
+            <div id="aiResponse" class="p-4 bg-gray-100 rounded-lg border border-gray-200 text-gray-800 hidden">
+                <p class="text-sm text-gray-600 mb-2">AIアシスタントからの回答:</p>
+                <div id="aiResponseContent" class="prose max-w-none"></div>
+            </div>
+            <div id="aiLoading" class="text-center mt-4 hidden">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-t-4 border-blue-600 border-gray-200"></div>
+                <p class="text-gray-600 mt-2">AIアシスタントが回答を生成中です...</p>
+            </div>
+             <div id="aiError" class="text-red-600 text-center mt-4 hidden">
+                <p>エラーが発生しました。もう一度お試しください。</p>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-gray-800 text-white p-6 mt-8 text-center rounded-t-xl shadow-inner">
         <p>&copy; 2025 個別指導塾. All Rights Reserved.</p>
         <p class="text-sm mt-2 opacity-80">この資料は研修目的で作成されました。</p>
     </footer>
+
+    <script>
+        document.getElementById('askAiButton').addEventListener('click', async () => {
+            const questionInput = document.getElementById('aiQuestionInput');
+            const aiResponseDiv = document.getElementById('aiResponse');
+            const aiResponseContent = document.getElementById('aiResponseContent');
+            const aiLoadingDiv = document.getElementById('aiLoading');
+            const aiErrorDiv = document.getElementById('aiError');
+
+            const prompt = questionInput.value.trim();
+
+            // Clear previous response and error
+            aiResponseContent.innerHTML = '';
+            aiResponseDiv.classList.add('hidden');
+            aiErrorDiv.classList.add('hidden');
+
+            if (!prompt) {
+                aiResponseContent.innerHTML = '<p class="text-red-500">質問を入力してください。</p>';
+                aiResponseDiv.classList.remove('hidden');
+                return;
+            }
+
+            aiLoadingDiv.classList.remove('hidden'); // Show loading indicator
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: `個別指導塾の講師向けに、以下の質問に答えてください。具体的な指導法や、生徒の理解を深めるためのヒントを含めて、丁寧かつ分かりやすく説明してください。質問内容：${prompt}` }] });
+
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // If you want to use models other than gemini-2.0-flash or imagen-3.0-generate-002, provide an API key here. Otherwise, leave this as-is.
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    let text = result.candidates[0].content.parts[0].text;
+                    // Remove Markdown headers (#)
+                    text = text.replace(/#+\s*/g, ''); 
+                    // Convert Markdown bold (**) to HTML <b> tags
+                    text = text.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+                    // Remove Markdown italics (*) - assuming single * is for italics or accidental formatting
+                    text = text.replace(/\*/g, '');
+
+                    aiResponseContent.innerHTML = `<p>${text.replace(/\n/g, '<br>')}</p>`; // Preserve line breaks
+                    aiResponseDiv.classList.remove('hidden');
+                } else {
+                    aiErrorDiv.classList.remove('hidden');
+                    console.error("Gemini API response structure unexpected:", result);
+                }
+            } catch (error) {
+                aiErrorDiv.classList.remove('hidden');
+                console.error("Error calling Gemini API:", error);
+            } finally {
+                aiLoadingDiv.classList.add('hidden'); // Hide loading indicator
+            }
+        });
+    </script>
 </body>
 </html>
